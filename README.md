@@ -1,19 +1,46 @@
-# System Status Plugin
+# SysStatPlugin
 
-[QChatGPT](https://github.com/RockChinQ/QChatGPT) 项目的系统状态插件  
+A [LangBot](https://github.com/langbot-app/langbot) plugin for viewing system status including CPU, memory, and disk usage.
 
-参考 [sysstatqcbot](https://github.com/Soulter/sysstatqcbot) 做的
+Inspired by [sysstatqcbot](https://github.com/Soulter/sysstatqcbot)
 
-## 安装
+## Features
 
-完成主程序配置后，使用管理员账号私聊机器人发送以下命令
+- View current process memory usage
+- View system memory information (total, used, free, usage percentage)
+- View CPU information (user time, system time, idle time, usage percentage)
+- View CPU core count and frequency
+- View disk usage information
+
+## Usage
+
+Send one of the following commands to the bot:
 
 ```
-!plugin get https://github.com/RockChinQ/SysStatPlugin
+!sysstat
 ```
 
-安装完成后，重启程序即可使用
+The bot will reply with the current system status information.
 
-## 使用
+## Example Output
 
-向机器人发送 `!sysstat` 或 `!sys` 即可查看系统状态
+```
+====系统状态====
+进程内存占用: 245.32MB
+总内存: 16384.00MB
+已用内存: 8192.50MB
+空闲内存: 8191.50MB
+内存使用率: 50.00%
+用户态CPU时间: 1234.56秒
+系统态CPU时间: 567.89秒
+空闲CPU时间: 12345.67秒
+CPU使用率: 25.50%
+CPU逻辑核心数: 8
+CPU物理核心数: 4
+CPU当前频率: 2400.00MHz
+总磁盘空间: 256.00GB
+已用磁盘空间: 128.50GB
+空闲磁盘空间: 127.50GB
+磁盘使用率: 50.20%
+============
+```

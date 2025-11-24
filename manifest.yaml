@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Plugin
+metadata:
+  author: RockChinQ
+  name: SysStatPlugin
+  repository: 'https://github.com/RockChinQ/SysStatPlugin'
+  version: 0.2.0
+  description:
+    en_US: 'View system status including CPU, memory, and disk usage'
+    zh_Hans: '查看系统状态，包括 CPU、内存和磁盘使用情况'
+  label:
+    en_US: SysStat
+    zh_Hans: 系统状态
+  icon: assets/icon.svg
+spec:
+  config: []
+  components:
+    Command:
+      fromDirs:
+      - path: components/commands/
+execution:
+  python:
+    path: main.py
+    attr: SysStatPlugin
